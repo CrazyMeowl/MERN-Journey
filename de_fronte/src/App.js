@@ -1,9 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// import from components
+import DeNavBar  from './components/DeNavBar';
 
 function App() {
   return (
     <div className="App">
+      <DeNavBar></DeNavBar>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
