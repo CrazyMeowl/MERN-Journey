@@ -2,24 +2,39 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {NavLink } from 'react-router-dom';
+import Button from 'react-bootstrap/esm/Button';
+import {NavLink} from 'react-router-dom';
+
+// import logo from './logo.png';
+
 function DeNavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
           <Navbar.Brand href="/">
             <img
-              src="######"
+              src="logo128.png"
               width="30"
               height="30"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
-            /> NAVBAR TEXT</Navbar.Brand>
+            /> De Garage</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to="/"> Home </NavLink> 
-            <NavLink to="/cars"> Cars </NavLink>
+
+            <NavLink to="/">
+              <Button variant="dark" >
+                  Home
+              </Button>
+            </NavLink>
+
+            <NavLink to="/cars">
+              <Button variant="dark" >
+                  Cars
+              </Button>
+            </NavLink>
+          
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
