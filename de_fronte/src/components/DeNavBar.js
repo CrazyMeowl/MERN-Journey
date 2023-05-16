@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/esm/Button';
 import {NavLink} from 'react-router-dom';
-
+import RouteButton from './RouteButton';
 // import logo from './logo.png';
 
 function DeNavBar() {
@@ -23,19 +23,12 @@ function DeNavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
 
-            <NavLink to="/">
-              <Button variant="dark" >
-                  Home
-              </Button>
-            </NavLink>
-
-            <NavLink to="/cars">
-              <Button variant="dark" >
-                  Cars
-              </Button>
-            </NavLink>
+    
+            <RouteButton label='Home' route='/'></RouteButton>
+            <RouteButton label='Members' route='/members'></RouteButton>
+            
           
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -45,14 +38,14 @@ function DeNavBar() {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
-          <Nav>
+          {/* <Nav>
             <Nav.Link href="#deets">More deets</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               Dank memes
             </Nav.Link>
-          </Nav>
+          </Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
