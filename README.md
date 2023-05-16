@@ -1,2 +1,2 @@
-# React-Journey
-My journey to take on React as my next subject of interest
+# MERN-Journey
+My journey to take on MERN stack as my next subject of interest
