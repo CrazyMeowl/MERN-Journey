@@ -15,13 +15,16 @@ db.once('open',()=> console.log('Connected to database'))
 
 app.use(express.json())
 
-const mernRouter = require('./routes/mern')
+const mernsRouter = require('./routes/merns')
+
+app.use('/merns',mernsRouter)
+
 
 app.use(morgan('combined'))
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 
 
 // 127.0.0.1 - localhost
