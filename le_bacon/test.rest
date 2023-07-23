@@ -1,0 +1,32 @@
+GET http://localhost:5000/mern
+
+###
+
+GET http://localhost:5000/mern/64ba38fa38a81137345e1329
+
+###
+
+POST http://localhost:5000/mern
+Content-Type: application/json
+
+{
+    "name": "CrazyMeowl123",
+    "activeState": "Idk"
+}
+
+###
+
+PATCH  http://localhost:5000/mern/64ba38fa38a81137345e1329
+Content-Type: application/json
+
+{
+    "name": "No more CrazyMeowl",
+    "activeState": "false"
+}
+
+
+###
+
+DELETE http://localhost:5000/mern/64ba38fa38a81137345e1329
+
+

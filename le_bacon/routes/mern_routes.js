@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Mern = require('../models/merns')
+const Mern = require('../models/mern_model')
 //Basic router
 
 // Get All

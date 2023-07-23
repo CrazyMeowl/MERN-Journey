@@ -5,9 +5,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/esm/Button';
 import {NavLink} from 'react-router-dom';
 import RouteButton from './RouteButton';
+import { useSignOut } from '../hooks/useSignOut';
 // import logo from './logo.png';
 
 function DeNavBar() {
+  const { signout } = useSignOut()
+
+  const handleClick = () => {
+    signout()
+  }
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -26,7 +33,9 @@ function DeNavBar() {
     
             <RouteButton label='Home' route='/'></RouteButton>
             <RouteButton label='Members' route='/members'></RouteButton>
-            
+            <RouteButton label='Sign In' route='/signin'></RouteButton>
+            <RouteButton label='Sign Up' route='/signup'></RouteButton>
+            <Button variant='dark' label='Sign Out' onClick={handleClick}>Sign Out</Button>
           
             {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

@@ -15,9 +15,10 @@ db.once('open',()=> console.log('Connected to database'))
 
 app.use(express.json())
 
-const mernsRouter = require('./routes/merns')
-
-app.use('/merns',mernsRouter)
+const mernRoutes = require('./routes/mern_routes')
+const userRoutes = require('./routes/user_routes')
+app.use('/api/mern',mernRoutes)
+app.use('/api/user',userRoutes)
 
 
 app.use(morgan('combined'))

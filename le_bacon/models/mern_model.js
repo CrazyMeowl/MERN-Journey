@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 
-const mernsSchema = new mongoose.Schema({
+const mernSchema = new mongoose.Schema({
     name:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     activeState:{
         type: String,
@@ -17,4 +18,4 @@ const mernsSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('Merns', mernsSchema)
+module.exports = mongoose.model('Mern', mernSchema)
